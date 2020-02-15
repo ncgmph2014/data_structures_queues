@@ -43,7 +43,7 @@ function PriorityQueue() {
       collection.push(element);
     } else {
       var added = false;
-      for (let i = 0; collection.length; i++) {
+      for (let i = 0; i < collection.length; i++) {
         if (element[i] < collection[i][1]) {
           //this doesn't work for some reason, but i understand how it would work if it did
           //checking priorities
