@@ -43,8 +43,9 @@ function PriorityQueue() {
       collection.push(element);
     } else {
       var added = false;
-      for (var i = 0; collection.length; i++) {
-        if (element[i] < collection[i][0]) {
+      for (let i = 0; collection.length; i++) {
+        if (element[i] < collection[i][1]) {
+          //this doesn't work for some reason, but i understand how it would work if it did
           //checking priorities
           collection.splice(i, 0, element);
           added = true;
@@ -76,7 +77,7 @@ function PriorityQueue() {
 
 var pq = new PriorityQueue();
 pq.enqueue(["Who cares?", 2]);
-pq.enqueue(["Dalai Lama, idk", 3]);
+pq.enqueue(["Dalai Llama, idk", 3]);
 pq.enqueue(["Peanut Butter man", 1]);
 pq.printCollection();
 pq.dequeue();
