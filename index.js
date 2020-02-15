@@ -73,3 +73,8 @@ function PriorityQueue() {
     return collection.length === 0;
   };
 }
+
+var pq = new PriorityQueue();
+pq.enqueue(["Who cares?", 2]);
+pq.enqueue(["Dalai Lama, idk", 3]);
+pq.enqueue(["Peanut Butter man", 1]);
