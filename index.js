@@ -44,7 +44,7 @@ function PriorityQueue() {
     } else {
       var added = false;
       for (var i = 0; collection.length; i++) {
-        if (element[i] < collection[i][1]) {
+        if (element[i] < collection[i][0]) {
           //checking priorities
           collection.splice(i, 0, element);
           added = true;
@@ -78,3 +78,7 @@ var pq = new PriorityQueue();
 pq.enqueue(["Who cares?", 2]);
 pq.enqueue(["Dalai Lama, idk", 3]);
 pq.enqueue(["Peanut Butter man", 1]);
+pq.printCollection();
+pq.dequeue();
+pq.front();
+pq.printCollection();
