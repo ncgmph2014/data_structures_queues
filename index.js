@@ -38,4 +38,22 @@ function PriorityQueue() {
   this.printCollection = function() {
     console.log(collection);
   };
+  this.enqueue = function(element) {
+    if (this.isEmpty()) {
+      collection.push(element);
+    } else {
+      var added = false;
+      for (var i = 0; collection.length; i++) {
+        if (element[i] < collection[i][1]) {
+          //checking priorities
+          collection.splice(i, 0, element);
+          added = true;
+          break;
+        }
+      }
+      if (!added) {
+        collection.push(element);
+      }
+    }
+  };
 }
