@@ -68,4 +68,8 @@ function PriorityQueue() {
   this.size = function() {
     return collection.length; //same as regular queue
   };
+
+  this.isEmpty = function() {
+    return collection.length === 0;
+  };
 }
