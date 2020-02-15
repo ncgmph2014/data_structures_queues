@@ -60,4 +60,8 @@ function PriorityQueue() {
     var value = collection.shift();
     return value[0];
   };
+
+  this.front = function() {
+    return collection[0];
+  };
 }
