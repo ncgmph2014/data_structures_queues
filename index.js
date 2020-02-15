@@ -10,4 +10,8 @@ function Queue() {
   this.dequeue = function() {
     return collection.shift();
   };
+
+  this.front = function() {
+    return collection[0];
+  };
 }
